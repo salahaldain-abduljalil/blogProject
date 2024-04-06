@@ -60,11 +60,11 @@
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                       aria-expanded="false">{{ Auth::user()->name }}</a>
                     <ul class="dropdown-menu">
-                      <li class="nav-item"><a class="nav-link" href="blog-details.html">My Blogs</a></li>
+                      <li class="nav-item"><a class="nav-link" href="{{ route('blog.myblog') }}">My Blogs</a></li>
                       <li class="nav-item">
-                        <form action="{{ route('logout') }}" method="post">
+                        <form action="{{ route('logout') }}" method="post" id="myform">
                       @csrf
-                        <a class="nav-link" href="javascript:$('form').submit();">Logout</a>
+                        <a class="nav-link" href="javascript:$('form#myform').submit();">Logout</a>
                     </form>
                     </li>
                     </ul>

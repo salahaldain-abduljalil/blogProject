@@ -12,8 +12,7 @@
             <div class="row">
                 <div class="col-6 mx-auto">
                     <form action="{{ route('login') }}" class="form-contact contact_form" action="contact_process.php"
-                        method="POST
-          " id="contactForm" novalidate="novalidate">
+                        method="POST" id = "contactForm" novalidate="novalidate">
                         @csrf
                         <div class="form-group">
                             <input class="form-control border" name="email" id="email" type="email"
@@ -23,7 +22,7 @@
                         </div>
                         <div class="form-group">
                             <input class="form-control border" name="password" id="name" type="password"
-                                placeholder="Enter your password">
+                                placeholder="Enter your password" value="{{ old('password') }}">
                             <x-input-error :messages="$errors->get('password')" class="mt-2" />
 
                         </div>
