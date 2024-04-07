@@ -25,8 +25,7 @@ Route::controller(ThemeController::class)->name('theme.')->group(function () {
     Route::any('/index','index')->name('index');
     Route::get('/category/{id}','category')->name('category');
     Route::get('/contact','contact')->name('contact');
-//    Route::get('/loginn','loginn')->name('loginn');
-//       Route::any('/registerr','registerr')->name('registerr');
+
 });
 
 //subscribe route
@@ -36,7 +35,7 @@ Route::post('/contact/store',[ContactController::class,'store'])->name('contact.
 
 //Blog route
 Route::get('myblog',[BlogController::class,'myblog'])->name('blog.myblog');
-Route::resource('blog',BlogController::class);
+Route::resource('blog',BlogController::class)->except('index');
 
 
 //comment route

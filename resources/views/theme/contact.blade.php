@@ -36,6 +36,13 @@
                     </div>
                 </div>
                 <div class="col-md-8 col-lg-9">
+
+
+                    @if(session('contactstatus'))
+                    <div class="alert alert-success">
+                        {{ session('contactstatus') }}
+                    </div>
+                    @endif
                     <form action="{{ route('contact.store') }}" class="form-contact contact_form"
                         method="post" id="contactForm" novalidate="novalidate">
                         @csrf

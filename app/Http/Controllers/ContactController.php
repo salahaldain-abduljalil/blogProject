@@ -12,7 +12,7 @@ class ContactController extends Controller
         $data = $request->validated();
 
         Contact::create($data);
-        return back()->with('status','your message Successfully');
-
+        return back()->with('contactstatus','your message created successfully');
+ 
     }
 }
